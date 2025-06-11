@@ -1,0 +1,59 @@
+<div class="container p-4">
+    <div class="row mt-4">
+        {{#each control}}
+           <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-header bg-secondary text-white">
+                    <h3 class="card-title  my-2 text-center">Registro de Acceso Vehicular</h3>
+                </div>
+                
+                    <div class="card-body"> 
+                        <p class="h5 text-center my-0 mr-3 mb-2 p-2 justify-content-center align-items-center">!Acceso vehicular registrado¡</p>
+                        <hr class="my-2 ">
+                        <p class="m-2 "><strong>N° de Registro:</strong>  {{numero_registro}} </p>
+                        <hr class="my-2">
+                        <p class="m-2"> <strong>Empresa (Nombre):</strong>  {{nombre_empresa}} </p>
+                        <hr class="my-2">
+                        <p class="m-2"><strong>Nombres y Apellidos:</strong>   {{nombre_apellido}} </p>
+                        <hr class="my-2">
+                        <p class="m-2"> <strong> Cédula/Rif:</strong>  {{cedula_rif}} </p>
+                        <hr class="my-2">
+                        <p class="m-2"><strong> Telefono:</strong> {{telefono}} </p>
+                        <hr class="my-2">
+                        <p class="m-2"><strong>Placa (Vehiculo):</strong>  {{placa_vehiculo}} </p> 
+                        <hr class="my-2">
+                        <p class="m-2"><strong> Hore de entrada:</strong>   {{hora_entrada}} </p>
+                        <hr class="my-2">
+                        <p class="m-2"><strong> Hore de salida:</strong>   {{hora_salida}} </p>
+                        <hr class="my-2">
+                        <p class="m-2"><strong> firma:</strong>   {{firma}} </p>  
+                        <hr class="my-2"> 
+                        <p class="m-2"> <strong> Fecha de Registro:</strong>  {{formatDate fecha_registro 'DD [de] MMMM [de] YYYY HH:mm'}} </p>
+                        <hr class="my-2"> 
+                        <p class="m-2"><strong> observaciones:</strong>   {{observaciones}} </p>  
+                        <hr class="my-2"> 
+                        <p class="m-2"> <strong> Registrado:</strong>  {{momentFromNow fecha_registro}}</p>
+                        <hr class="my-2"> 
+                        <div class="text-center">      
+                            <a href=" links/delete/id/{{id}}" class="btn btn-danger btn-block">Eliminar</a>
+                            <a href=" links/edit/id/{{id}}" class="btn btn-secondary btn-block">Editar</a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        {{else }} <!--este else es para que muestre un mensaje de que no hay mas registros-->
+           <div class="container p-4">
+                <div class="row"> 
+                    <div class="col-md-4 mas-auto ">
+                        <div class="card  text-center ">
+                            <div class="card-body">
+                             <p class= "my-1 mr-4 mb-2 p-2 justify-content-center align-items-center">No hay registros</p>
+                             <a href="/links/add">Realiza uno!</a>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        {{/each }}
+    </div>
+</div>

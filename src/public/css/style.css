@@ -1,0 +1,157 @@
+body {
+    background: #f5f6f5;
+    font-family: 'oswald', sans-serif;
+    overflow-y: auto;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+    position : fixed;
+}
+
+.masthead {
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    background: url('/img/fa3.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.masthead h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 992px) {
+    .masthead h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Para mover la 'x' a la izquierda */
+.alert .custom-close-right {
+    float: left; /* Mueve el botón a la izquierda */
+    margin-right: 15px; /* Añade un poco de espacio entre la 'x' y el texto */
+    margin-left: 0; /* Asegura que no hay margen extra a la izquierda */
+    opacity: 0.8;  /* Ajusta la opacidad si es necesario para que se vea bien */
+}
+
+/* Ajusta el padding para que el texto de la alerta no se solape con la 'x' */
+.alert-dismissible .alert-danger,
+.alert-dismissible .alert-success {
+    padding-left: 40px; /* Incrementa el padding izquierdo para el texto de la alerta */
+    padding-right: 15px; /* Mantén el padding derecho estándar */
+}
+
+.custom-close-right{
+    background-color:#a4b7f3;
+    border:0ch ;
+    color: #5d85f1;
+}
+
+.alert-success {
+    background-color: #a4b7f3; /* Un verde más claro, o el que prefieras */
+    border-color: #a4b7f3;    /* Un borde que combine */
+    color: #000000; 
+}
+
+.alert .close span {
+    color: #000000; /* Color de la 'X' para alertas de éxito */
+}
+
+.alert .close span:hover {
+    background-color: #000000;
+    color: #ffffff;; /* Ejemplo: #880000 para un rojo más oscuro al pasar el ratón */
+}
+
+
+/* logo del navigation*/
+.navbar-logo {
+    height: 40px;          /* Define una altura fija y apropiada para un logo de navegación */
+    width: auto;           /* Permite que el ancho se ajuste automáticamente manteniendo la proporción */
+    vertical-align: middle; /* Alinea el logo verticalmente con el texto "Fuerza Activa CA" */
+    margin-left: 10px;     /* Da un pequeño espacio entre el texto y el logo */
+    border-radius: 50%;    /* Si quieres que tu logo circular se vea redondo */
+}
+
+/* Opcional: Ajustes para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 35px; /* Un poco más pequeño en pantallas pequeñas */
+        margin-left: 5px;
+    }
+}
+
+.footer-custom {
+    background-color: black;
+    color: white;
+    padding: 15px 0; /* Un poco más de padding para que sea más visible */
+    font-size: 14px;
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra el texto */
+    /* **Importante**: Remueve cualquier 'position: fixed' o 'position: absolute' si los tenías */
+    /* margin-top: auto; si el padre es flexbox con flex-direction: column */
+}
+
+/* Contenedor del fondo (la imagen) */
+.background-container {
+    background: url('/img/fa05.png') no-repeat center center fixed; /* <--- CAMBIA 'security_background.jpg' por tu imagen */
+    background-size: cover; /* Cubre todo el área sin repetirse */
+    min-height: 100vh;      /* Asegura que ocupe al menos toda la altura de la ventana */
+    display: flex;          /* Para centrar el contenido verticalmente */
+    align-items: center;    /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    position: relative;     /* Necesario para posicionar el overlay */
+    padding-top: 60px; /* Espacio para el navbar fijo si lo tienes */
+    padding-bottom: 60px; /* Espacio para el footer fijo si lo tienes */
+}
+
+/* Capa de overlay para que el texto sea legible sobre el fondo */
+.content-overlay {
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco con 85% de opacidad */
+    /* background-color: rgba(0, 0, 0, 0.7); para texto blanco sobre fondo oscuro */
+    border-radius: 10px;    /* Esquinas redondeadas para el contenido */
+    padding: 30px;          /* Padding dentro del overlay */
+    margin: 20px;           /* Margen alrededor del overlay */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    width: 100%;            /* Ocupa todo el ancho disponible */
+    max-width: 1100px;      /* Limita el ancho para mejor lectura */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+/* Sombra de texto para mejorar la legibilidad sobre la imagen de fondo */
+.text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil para texto */
+}
+
+/* Estilos para las listas personalizadas (íconos) */
+.custom-list-icons li {
+    margin-bottom: 8px; /* Espacio entre los ítems de la lista */
+    display: flex;      /* Para alinear el ícono y el texto */
+    align-items: flex-start; /* Alinea los ítems al inicio */
+}
+
+.custom-list-icons li i {
+    font-size: 1.1em; /* Un poco más grande para los íconos */
+    margin-top: 3px; /* Pequeño ajuste vertical para íconos */
+}
+
+/* --- Asegúrate de que tu footer tenga estos estilos también --- */
+.footer-custom {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    /* Si quieres el footer siempre fijo al final de la ventana: */
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* z-index: 1000; */
+}

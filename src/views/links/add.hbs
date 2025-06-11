@@ -1,0 +1,90 @@
+<div class="container  p-4">
+    <div class="row my-4">
+        <div class="  col-md-4 align-items-stretch mx-auto"> 
+            <div class="card shadow">
+                <div class="card-header bg-secondary text-white">
+                    <h3 class="card-title  my-2 text-center">Registro de Acceso Vehicular</h3>
+                </div>
+                <div class="card-body">
+                    <p class="h5 text-center my-1 mr-4 mb-2 p-2 justify-content-center align-items-center"> !Registrar acceso¡ </p>
+                    <hr class="my-2">
+                    <form action="/links/add" method="post">
+                    <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong>N° de Registro:</strong>
+                        <input type="text" class="form-control form-control-sm"   name="numero_registro" placeholder="N° 1..." autofocus>
+                    </div>
+                    </div>
+                    <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong>Empresa (Nombre)::</strong>
+                        <input type="text" class="form-control form-control-sm"   name="nombre_empresa" placeholder="Empresa C.A.">
+                    </div>
+                    </div>
+                    <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong>Nombres y Apellidos:</strong>
+                        <input type="text" class="form-control form-control-sm"   name="nombre_apellido" placeholder="Wilmer Antonio Perez Rojas">
+                    </div>
+                    </div>
+                    <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong>Cédula/Rif:</strong>
+                        <input type="text" class="form-control form-control-sm"   name="cedula_rif" placeholder=" V-26.821.179 Ó j-41043916-5">
+                    </div>
+                    </div>
+                    
+                    <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong> Telefono:</strong>
+                        <input type="text" class="form-control form-control-sm"   name="telefono" placeholder="+58414-9513574">
+                    </div>
+                    </div>
+                     <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong> Placa (Vehículo):</strong>
+                        <input type="text" class="form-control form-control-sm"   name="placa_vehiculo" placeholder="MBV35C">
+                    </div>
+                    </div>
+                      <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong> Hora (Entrada):</strong>
+                        <input type="text" class="form-control form-control-sm"   name="hora_entrada" placeholder="03:40 pm">
+                    </div>
+                    </div>
+                      <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong> Hora (Salida):</strong>
+                        <input type="text" class="form-control form-control-sm"   name="hora_salida" placeholder="05:40 pm">
+                    </div>
+                    </div>
+                      
+                      <div class="form-group row" > 
+                        <div class= "col-md-12 mb-2">
+                        <strong> Firma: </strong>
+                        <input type="text" class="form-control form-control-sm"   name="firma" placeholder="Wilmer Perez">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12 mb-2">
+                        <strong class="my-1 mr-4 mb-0"> Fecha </strong>
+                        <input type="date" class="form-control form-control-sm" name="fecha_registro"  placeholder="Fecha Registro ">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12 mb-2">
+                        <strong> Observaciones: </strong>  
+                        <textarea  type= "text "name="observaciones" rows= "2" class="form-control form-control-sm"  placeholder="!conductor sospechoso. etc...¡ "></textarea>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <button class=" btn btn-secondary btn-block col-md-12">
+                            Guardar
+                        </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

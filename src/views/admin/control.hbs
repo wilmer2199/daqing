@@ -1,0 +1,60 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <h3>Gestión de Registros</h3>
+            <hr>
+
+            <a href="/admin/control/download-pdf" class="btn btn-primary mb-3">
+                <i class="fas fa-file-pdf"></i> Descargar PDF
+            </a>
+            {{#if control.length}}
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <!-- <th>ID Cliente</th> -->
+                            <th>Registro (Numero)</th>
+                            <th>Empresa (Nombre)</th> 
+                            <th>Chofer (Nombre y Apellidos)</th>
+                            <th>Cédula/RIF</th>
+                            <th>Teléfono</th>
+                            <th>Placa (Vehículo)</th>
+                            <th>Hora de entrada</th>
+                            <th>Hora de salida</th>
+                            <th>firma</th>
+                            <th>Fecha </th>
+                            <th>observaciones</th>
+                            <th>Usuario Creador</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each control}}
+                        <tr>
+                           <!-- <td>{{cliente_id}}</td> -->
+                            <td>{{numero_registro}}</td>
+                            <td>{{nombre_empresa}}</td>
+                            <td>{{nombre_apellido}}</td>
+                            <td>{{cedula_rif}}</td>
+                            <td>{{telefono}}</td>
+                            <td>{{placa_vehiculo}}</td>
+                            <td>{{hora_entrada}}</td>
+                            <td>{{hora_salida}}</td>
+                            <td>{{firma}}</td>
+                            <td>{{formatDate fecha_registro 'DD [de] MMMM [de] YYYY HH:mm'}} <p>Registrado: {{momentFromNow fecha_registro}}</p> </td> 
+                            <td>{{observaciones}}</td>
+                            <td>{{nombre_usuario}} ({{usuario_creador_nombre}})</td> </tr>
+                            
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <a href="/admin" class="btn btn-success btn-block">Regresar</a>
+            {{else}}
+            <div class="alert alert-info" role="alert">
+                ¡ERROR! No se encontraron clientes, aunque se esperaban.
+            </div>
+            <a href="/admin" class="btn btn-success btn-block">Regresar</a>
+            {{/if}}
+        </div>
+    </div>
+</div>

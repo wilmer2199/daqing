@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const {handlebars1} = require ('../lib/handlebars1');
+const {handlebars1} = require ('../lib/handlebars');
 
 const pool = require('../database');
-const { isLoggedIn } = require('../lib/auth');
+const { isLoggedIn, isAdmin } = require('../lib/auth');
 
 
 router.get('/add', isLoggedIn, (req, res) => {
@@ -88,5 +88,8 @@ router.post('/edit/id/:id', isLoggedIn, async (req, res) => {
     res.redirect('/links');
 });
 
+
+
+// Asegurarse  de que esta ruta esté protegida y solo los administradores puedan acceder
 
 module.exports = router;

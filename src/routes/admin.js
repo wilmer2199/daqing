@@ -229,7 +229,7 @@ router.get('/control/delete/:id', isLoggedIn, isAdmin, async (req, res) => {
         // es más complicado si otros clientes o admins usan la misma entrada de 'inicio'.
         // Por ahora, asumiremos que solo se elimina el registro de la tabla 'Clientes'.
         console.log(`-----> INTENTANDO ELIMINAR CONTROL CON ID: ${id} <-----`);
-        await pool.query('DELETE FROM control WHERE id = ?', [id]);
+        const result = await pool.query('DELETE FROM control WHERE id = ?', [id]);
         console.log("-----> RESULTADO DE LA ELIMINACIÓN DEL control <-----:", result);
         
         req.flash('success', 'Registro eliminado exitosamente.');

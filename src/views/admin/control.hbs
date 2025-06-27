@@ -12,9 +12,8 @@
                 <table class="table table-bordered table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <!-- <th>ID Cliente</th> -->
                             <th>Registro (Numero)</th>
-                            <th>Empresa (Nombre)</th> 
+                            <th>Empresa (Nombre)</th>
                             <th>Chofer (Nombre y Apellidos)</th>
                             <th>Cédula/RIF</th>
                             <th>Teléfono</th>
@@ -22,15 +21,15 @@
                             <th>Hora de entrada</th>
                             <th>Hora de salida</th>
                             <th>firma</th>
-                            <th>Fecha </th>
+                            <th>Fecha</th>
                             <th>observaciones</th>
                             <th>Usuario Creador</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         {{#each control}}
                         <tr>
-                           <!-- <td>{{cliente_id}}</td> -->
                             <td>{{numero_registro}}</td>
                             <td>{{nombre_empresa}}</td>
                             <td>{{nombre_apellido}}</td>
@@ -40,10 +39,20 @@
                             <td>{{hora_entrada}}</td>
                             <td>{{hora_salida}}</td>
                             <td>{{firma}}</td>
-                            <td>{{formatDate fecha_registro 'DD [de] MMMM [de] YYYY HH:mm'}} <p>Registrado: {{momentFromNow fecha_registro}}</p> </td> 
+                            <td>{{formatDate fecha_registro 'DD [de] MMMM [de] YYYY HH:mm'}}
+                                <p>Registrado: {{momentFromNow fecha_registro}}</p>
+                            </td>
                             <td>{{observaciones}}</td>
-                            <td>{{nombre_usuario}} ({{usuario_creador_nombre}})</td> </tr>
-                            
+                            <td>{{nombre_usuario}} ({{usuario_creador_nombre}})</td>
+                            <td>
+                                <a href="/admin/control/delete/{{control_id}}"
+                                    class="btn btn-outline-danger btn-sm"
+                                    onclick="return confirm('¿Estás seguro de que quieres eliminar este cliente?');">
+                                    Eliminar
+                                </a>
+                                </form>
+                            </td>
+                        </tr>
                         {{/each}}
                     </tbody>
                 </table>
